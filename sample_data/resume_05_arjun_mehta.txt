@@ -1,0 +1,21 @@
+Arjun Mehta
+Email: arjun.mehta@example.com | Phone: +91-90000-00005 | Mumbai
+
+Summary
+Final-year computer science graduate from a tier-1 premier institute.
+Strong in data structures and competitive programming.
+Total Experience: 0 years (fresher)
+
+Projects
+- Chess engine in C++ using minimax search
+- Library management system in Java (Swing)
+- Simple Python scripts for automating file renaming
+
+Skills
+C++, Java, Python (basics), Git, Data Structures and Algorithms
+
+Achievements
+- Rated 1850 on an online competitive programming platform
+
+Education
+B.Tech Computer Science - National Institute of Advanced Technology (fictional, tier-1), 2026, CGPA 8.9

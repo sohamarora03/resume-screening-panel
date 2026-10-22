@@ -1,0 +1,25 @@
+Rakesh Kumar Verma
+Email: rakesh.verma@example.com | Phone: +91-90000-00003 | Pune
+Age: 41
+
+Summary
+Mechanical engineer turned software developer. Completed a 6-month full-stack
+Python programme and have since built data and API projects professionally.
+Total Experience: 1 year
+
+Experience
+Python Developer - Sahyadri Analytics (fictional) | Oct 2024 - Present
+- Built internal REST APIs with FastAPI for an analytics dashboard
+- Wrote SQL queries on MySQL for daily sales reports
+- Cleaned and analysed production data with Pandas
+- Added pytest tests and packaged the service with Docker
+
+Production Engineer - Deccan Auto Components (fictional) | 2008 - 2023
+- Led a team of 12 and automated quality reports with Excel macros
+
+Skills
+Python, FastAPI, REST APIs, SQL, MySQL, Git, Pandas, pytest, Docker
+
+Education
+B.E. Mechanical Engineering - Government Engineering College (fictional), 2006
+Python Full-Stack Programme - CodeBridge Academy (fictional), 2024

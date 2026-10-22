@@ -1,0 +1,27 @@
+Priya Raghavan
+Email: priya.raghavan@example.com | Phone: +91-90000-00001 | Pune
+GitHub: github.com/priya-r-dev (fictional)
+
+Summary
+Backend developer with hands-on experience building Django REST services
+and PostgreSQL databases. Comfortable with Docker, AWS and automated testing.
+Total Experience: 1.5 years
+
+Experience
+Software Engineer - Kalpa Logistics Software (fictional), Pune | Jun 2022 - Feb 2024
+- Built REST APIs in Django REST Framework for shipment tracking (40+ endpoints)
+- Designed PostgreSQL schemas and optimised slow SQL queries (3x faster reports)
+- Wrote pytest test suites, raising coverage from 45% to 82%
+- Containerised services with Docker and deployed them on AWS EC2 and S3
+
+Career break - Mar 2024 to Feb 2025 (maternity leave)
+- Completed "AWS Cloud Practitioner" certification during the break
+
+Freelance Python Developer | Mar 2025 - Present
+- Built a Flask inventory API for a local retailer, versioned on GitHub
+
+Skills
+Python, Django, Flask, REST APIs, PostgreSQL, SQL, Git, GitHub, Docker, AWS, pytest, Linux
+
+Education
+B.E. Computer Engineering - Pune Institute of Engineering (fictional), 2022, CGPA 8.4
