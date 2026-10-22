@@ -1,0 +1,29 @@
+
+digraph G {
+  rankdir=LR; bgcolor=white; pad=0.3; nodesep=0.35; ranksep=0.55; compound=true; fontname="Helvetica";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=12, penwidth=1.4, margin="0.18,0.10"]; edge [fontname="Helvetica", fontsize=10, color="#475569", penwidth=1.3];
+  label="Deployment Architecture"; labelloc=t; fontsize=18;
+
+  user [label="User\n(web browser)", shape=oval, fillcolor="#e0e7ff"];
+  subgraph cluster_host { label="Streamlit Community Cloud / local machine (Python 3.10+)";
+    style="rounded,filled"; fillcolor="#f8fafc"; color="#64748b";
+    ui [label="Streamlit UI\n:8501", fillcolor="#f1f5f9"];
+    orch [label="Orchestrator\n(CrewAI Crews)", fillcolor="#e2e8f0", penwidth=2];
+    subgraph cluster_agents { label="4 independent agents"; style="rounded,dashed"; color="#94a3b8";
+      jd [label="JD Analyst\nAgent", fillcolor="#cffafe"];
+      sc [label="Screener\nAgent", fillcolor="#fef3c7"];
+      bc [label="Bias Checker\nAgent", fillcolor="#fae8ff"];
+      hr [label="HR Summary\nAgent", fillcolor="#dcfce7"];
+    }
+    secrets [label="Secrets\n(.env / st.secrets)\nGROQ_API_KEY", shape=cylinder, fillcolor="#fef9c3"];
+    logs [label="logs/run_log.txt", shape=cylinder, fillcolor="#fffbeb"];
+  }
+  groq [label="Groq Cloud\nLLM API\n(HTTPS)", shape=box3d, fillcolor="#fee2e2"];
+  out [label="Output to user\nranked shortlist\nCSV / PDF download", shape=note, fillcolor="#dcfce7"];
+
+  user -> ui [label="HTTPS"]; ui -> orch;
+  orch -> jd -> sc -> bc -> hr [color="#1F3A5F", penwidth=2];
+  hr -> groq [ltail=cluster_agents, style=dashed, dir=both, label="prompts / JSON answers"];
+  secrets -> orch [style=dashed]; orch -> logs [style=dashed];
+  hr -> out [label="results"];
+}

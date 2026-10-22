@@ -1,0 +1,36 @@
+
+digraph G {
+  rankdir=LR; bgcolor=white; pad=0.3; nodesep=0.45; ranksep=0.6; fontname="Helvetica";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=12, penwidth=1.4, margin="0.18,0.10"]; edge [fontname="Helvetica", fontsize=10, color="#475569", penwidth=1.3];
+  label="System Architecture - Resume Screening Panel"; labelloc=t; fontsize=18;
+
+  user [label="HR User", shape=oval, fillcolor="#e0e7ff"];
+  subgraph cluster_ui { label="Presentation layer"; style="rounded,dashed"; color="#94a3b8";
+    ui [label="Streamlit Web UI\n(app.py)\nupload · live status · results", fillcolor="#f1f5f9"];
+    cli [label="CLI runner\n(main.py)", fillcolor="#f1f5f9"];
+  }
+  subgraph cluster_core { label="Orchestration layer (CrewAI)"; style="rounded,dashed"; color="#94a3b8";
+    parser [label="Document parser\n(PDF / TXT)", fillcolor="#f8fafc"];
+    orch [label="Orchestrator\n(orchestrator.py)", fillcolor="#e2e8f0", penwidth=2];
+    jd [label="1. JD Analyst Agent", fillcolor="#cffafe"];
+    sc [label="2. Screener Agent", fillcolor="#fef3c7"];
+    bc [label="3. Bias Checker Agent", fillcolor="#fae8ff"];
+    hr [label="4. HR Summary Agent", fillcolor="#dcfce7"];
+  }
+  subgraph cluster_ai { label="Model layer"; style="rounded,dashed"; color="#94a3b8";
+    llm [label="LLM factory\n(utils/llm.py)", fillcolor="#f8fafc"];
+    groq [label="Groq API\nLlama 3.3 70B\n(live mode)", fillcolor="#fee2e2"];
+    demo [label="Offline engine\n(demo mode)", fillcolor="#f1f5f9"];
+  }
+  subgraph cluster_out { label="Outputs"; style="rounded,dashed"; color="#94a3b8";
+    logs [label="logs/run_log.txt\n(hand-off log)", shape=note, fillcolor="#fffbeb"];
+    res [label="Ranked shortlist\nCSV · PDF · JSON", shape=note, fillcolor="#fffbeb"];
+  }
+
+  user -> ui [label="JD + resumes"]; user -> cli;
+  ui -> parser; cli -> parser; parser -> orch [label="text"];
+  orch -> jd; orch -> sc; orch -> bc; orch -> hr;
+  jd -> llm [style=dotted]; sc -> llm [style=dotted]; bc -> llm [style=dotted]; hr -> llm [style=dotted];
+  llm -> groq; llm -> demo;
+  orch -> logs; orch -> res; res -> ui [label="display / download", constraint=false];
+}
