@@ -1,0 +1,27 @@
+# Secrets - never commit
+.env
+*.key
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Run artefacts
+logs/*.txt
+outputs/
+!logs/.gitkeep
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Office lock files
+~$*
+
+# Large duplicate of demo.mp4
+docs/demo/*.webm
