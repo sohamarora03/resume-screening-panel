@@ -1,0 +1,39 @@
+Job Title: Junior Python Developer
+Company: NimbusSoft Technologies Pvt. Ltd. (fictional)
+Location: Pune, Maharashtra (Hybrid - 3 days in office)
+Employment Type: Full-time
+Experience: 0-2 years
+
+About the role:
+NimbusSoft builds internal tools and REST services for logistics clients.
+You will join a team of six engineers, write backend features in Python,
+fix bugs, write tests and take part in code reviews.
+
+Responsibilities:
+- Build and maintain REST APIs for our order-tracking platform
+- Write clean, tested Python code and review teammates' pull requests
+- Work with SQL databases to design tables and write queries
+- Help containerise services and deploy them to the cloud
+
+Must-have skills:
+- Python
+- SQL (MySQL or PostgreSQL)
+- Git / GitHub
+- REST APIs
+- Django or Flask
+
+Nice-to-have skills:
+- Docker
+- AWS
+- Pandas
+- Unit testing (pytest)
+- React
+
+Qualifications:
+- B.E. / B.Tech / BCA / MCA in Computer Science, IT or a related field (or equivalent practical experience)
+- Good written and spoken English
+
+What we offer:
+- Mentorship from senior engineers
+- Learning budget for certifications
+- Health insurance
